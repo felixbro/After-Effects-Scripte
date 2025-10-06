@@ -23,9 +23,11 @@
 
         // Expression string zusammensetzen
         var expression = 
-            "var obj1 = thisComp.layer('" + firstLayer.name + "');" +
-            "var obj2 = thisComp.layer('" + lastLayer.name + "');" +
-            "obj1.transform.position + (obj2.transform.position - obj1.transform.position) / " + (count - 1) + " * " + i + ";";
+            "var obj1 = thisComp.layer('" + firstLayer.name + "');\n" +
+			"var obj2 = thisComp.layer('" + lastLayer.name + "');\n" +
+			"var total = " + (count-1) + ";\n" +
+			"var idx = " + i + ";\n" +
+			"obj1.transform.position + (obj2.transform.position - obj1.transform.position) / total * idx;";
 
         currentLayer.transform.position.expression = expression;
     }
