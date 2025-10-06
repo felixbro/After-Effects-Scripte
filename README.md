@@ -1,2 +1,2 @@
 # After-Effects-Scripte
-Eine kleine Sammlung nützlicher after effects Scripte 
+Eine kleine Sammlung nützlicher After Effects Scripte 
