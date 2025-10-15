@@ -1,3 +1,17 @@
+/*
+    Dieses Script erstellt ein ScriptUI-Panel für After Effects mit vier Hauptfunktionen, die in zwei Kategorien gruppiert sind:
+
+    Kategorie "Verteilen":
+    - Dynamisch: Verteilt ausgewählte Ebenen zwischen zwei Referenzobjekten mit Expressions (dynamische automatische Verteilung, die sich beim Verschieben der Referenzebenen anpasst).
+    - Statisch: Verteilt ausgewählte Ebenen gleichmäßig zwischen zwei Ankerpunkten per Keyframes (statische Positionierung, keine Expressions).
+
+    Kategorie "Organize":
+    - Crypto: Importiert Cryptomatte-Dateien aus dem Quellordner der aktuell gewählten Footage und legt sie passend in der Projektstruktur ab.
+    - Organize: Sortiert ausgewählte Footage-Dateien im Projektfenster nach ihrem Speicherort auf der Festplatte und verschiebt sie in passende After Effects Projektordner.
+
+    Alle Funktionen sind über eigene Buttons im Panel aufrufbar. Die Oberfläche ist optisch in die zwei Kategorien gegliedert.
+*/
+
 function main(thisObj) {
     var win = thisObj instanceof Panel ? thisObj : new Window("palette", "ObjektVerteiler", undefined, {resizeable:true});
     win.orientation = "column";
@@ -226,3 +240,4 @@ function main(thisObj) {
     return win;
 }
 main(this);
+
